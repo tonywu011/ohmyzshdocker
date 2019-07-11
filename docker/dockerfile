@@ -8,3 +8,4 @@ RUN cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 RUN git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ADD .zshrc /root
 RUN chsh -s /bin/zsh
+RUN git clone https://github.com/tonywu011/ohmyzshdocker.git ~/githubsource
