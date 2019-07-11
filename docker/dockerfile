@@ -1,0 +1,9 @@
+FROM ubuntu:18.04
+RUN apt-get update -y
+RUN apt-get upgrade -y
+RUN apt-get install git zsh nano -y
+RUN apt-get install powerline fonts-powerline -y
+RUN git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+RUN cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+RUN git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+ADD .zshrc /root
